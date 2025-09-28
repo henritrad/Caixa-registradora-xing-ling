@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Atacadão Xing Ling</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Atacadão Xing Ling</h1>
+
+        <section class="product-entry card">
+            <h2>Adicionar Produto</h2>
+            <div class="row">
+                <label>Nome
+          <input id="product-name" placeholder="Ex: Picanha" />
+        </label>
+                <label>Preço (R$)
+          <input id="product-price" type="number" step="0.01" placeholder="0.00" />
+        </label>
+                <label>Quantidade
+          <input id="product-qty" type="number" step="1" value="1" />
+        </label>
+            </div>
+            <div class="row actions">
+                <button id="add-product">Adicionar à venda</button>
+                <button id="clear-products" class="muted">Limpar itens</button>
+            </div>
+        </section>
+
+        <section class="cart card">
+            <h2>Itens no Carrinho</h2>
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Qtd</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="totals">
+                <div>Subtotal: <span id="subtotal">R$ 0,00</span></div>
+                <div>Impostos(18%): <span id="tax">R$ 0,00</span></div>
+                <div class="total">Total: <span id="total">R$ 0,00</span></div>
+            </div>
+
+            <div class="payment">
+                <label>Pago (R$)
+          <input id="paid-amount" type="number" step="0.01" placeholder="0.00" />
+        </label>
+                <button id="finalize">Finalizar Venda</button>
+                <div id="change" class="change"></div>
+            </div>
+
+            <div class="receipt" id="receipt" aria-live="polite"></div>
+        </section>
+
+        <footer>
+            <p> Desenvolvido por Gustavo Henrique</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
